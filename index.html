@@ -27,7 +27,7 @@
       z-index: -1;
     }
 
-    /* Text at bottom */
+    /* Footer text at bottom */
     .footer-text {
       position: absolute;
       bottom: 5%; /* slightly above bottom */
@@ -36,23 +36,3 @@
       font-size: clamp(1rem, 1.5vw, 1.5rem); /* responsive scaling */
       color: white;
       opacity: 0.9;
-      padding: 0 10px; /* some horizontal padding for small screens */
-      box-sizing: border-box;
-    }
-
-    /* Optional: make text slightly larger on very small screens */
-    @media (max-height: 400px) {
-      .footer-text {
-        font-size: 1rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="bg"></div>
-
-  <div class="footer-text">
-    <p>design by Ayyarametallogo</p>
-  </div>
-</body>
-</html>
