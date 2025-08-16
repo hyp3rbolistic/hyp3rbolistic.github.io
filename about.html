@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ABOUT — Hyperbolistic</title>
+<title>About - Hyperbolistic</title>
 <style>
   html, body {
     margin: 0;
@@ -42,50 +42,12 @@
     color: black;
   }
 
-  /* Tiled background logo */
-  .bg {
+  /* Tiled, angled background */
+  body::before {
+    content: "";
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://hyp3rbolistic.github.io/logobackground.jpg') repeat;
-    opacity: 0.5;
-    z-index: -1;
-  }
-
-  /* Centered text box */
-  .content-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0,0,0,0.7); /* semi-transparent box */
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    max-width: 90%;
-  }
-</style>
-</head>
-<body>
-
-  <!-- Header with buttons -->
-  <div class="header">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-  <!-- Tiled logo background -->
-  <div class="bg"></div>
-
-  <!-- Centered content box -->
-  <div class="content-box">
-    <h1>About Me</h1>
-    <p>This is where you can write your introduction, portfolio description, or whatever content you want for this page.</p>
-  </div>
-
-</body>
-</html>
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: url('htt
