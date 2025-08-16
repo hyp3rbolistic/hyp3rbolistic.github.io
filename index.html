@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HONESTY IN BLOOM</title>
+  <title>Hyperbolistic</title>
   <style>
     body, html {
       margin: 0;
@@ -47,15 +47,17 @@
       to { opacity: 1; }
     }
 
-    /* Full-screen background image */
+    /* Full-screen, responsive background image */
     .bg {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: url('https://hyp3rbolistic.github.io/background.webp') no-repeat center center;
-      background-size: cover;
+      background: url('./background.png') no-repeat center center;
+      background-size: cover;           /* fills the screen */
+      background-position: center center; 
+      background-attachment: fixed;     /* optional parallax effect */
       z-index: -1;
       opacity: 0;
       animation: fadeIn 2s forwards;
