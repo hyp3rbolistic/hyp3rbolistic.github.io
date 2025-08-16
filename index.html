@@ -10,25 +10,50 @@
       padding: 0;
       height: 100%;
       overflow: hidden;
-      font-family: sans-serif;
+      font-family: monospace;
       background-color: black;
       color: white;
     }
 
-    /* Fade-in animation */
+    /* Header bar */
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #111; /* dark background */
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .header a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      margin: 0 5px;
+      border: 1px solid white;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .header a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    /* Fade-in animation for background */
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
 
-    /* Full-screen background image */
     .bg {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      /* Use full GitHub Pages URL for guaranteed loading */
       background: url('https://hyp3rbolistic.github.io/logobackground.jpg') no-repeat center center;
       background-size: cover;
       z-index: -1;
@@ -36,7 +61,7 @@
       animation: fadeIn 2s forwards;
     }
 
-    /* Footer text at bottom */
+    /* Footer text */
     .footer-text {
       position: absolute;
       bottom: 5%;
@@ -47,19 +72,23 @@
       opacity: 0;
       padding: 0 10px;
       box-sizing: border-box;
-      animation: fadeIn 2s 1s forwards; /* fade in with 1s delay */
+      animation: fadeIn 2s 1s forwards;
     }
 
-    @media (max-height: 400px) {
-      .footer-text {
-        font-size: 1rem;
-      }
-    }
   </style>
 </head>
 <body>
+  <!-- Header with buttons -->
+  <div class="header">
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Background image -->
   <div class="bg"></div>
 
+  <!-- Footer text -->
   <div class="footer-text">
     <p>design by Ayyarametallogo</p>
   </div>
