@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HONESTY IN BLOOM</title>
+<title>Hyperbolistic</title>
 <style>
   html, body {
     margin: 0;
@@ -49,10 +49,19 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://hyp3rbolistic.github.io/background.png') no-repeat center center;
-    background-size: cover;
+    background: url('./background.png') no-repeat center center;
+    background-size: contain; /* ensures image fits without being too large */
+    background-color: black;  /* fallback if image doesn’t load */
+    background-repeat: no-repeat;
+    background-position: center;
     z-index: -1;
-    opacity: 1;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
   /* Footer text */
@@ -67,21 +76,3 @@
 </style>
 </head>
 <body>
-
-  <!-- Header with buttons -->
-  <div class="header">
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-  <!-- Background image -->
-  <div class="bg"></div>
-
-  <!-- Footer text -->
-  <div class="footer-text">
-    <p>design by Ayyarametallogo</p>
-  </div>
-
-</body>
-</html>
