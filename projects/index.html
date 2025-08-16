@@ -1,91 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PROJECTS — Hyperbolistic</title>
-<style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-    font-family: monospace;
-    background-color: black;
-    color: white;
-    overflow: hidden;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROJECTS</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: monospace;
+      color: white;
+      background-color: black;
+      overflow: hidden;
+    }
 
-  /* Header bar */
-  .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #111;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    z-index: 10;
-  }
+    /* Header bar */
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #111;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      z-index: 10;
+    }
 
-  .header a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 16px;
-    margin: 0 5px;
-    border: 1px solid white;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
-  }
+    .header a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      margin: 0 5px;
+      border: 1px solid white;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
 
-  .header a:hover {
-    background-color: white;
-    color: black;
-  }
+    .header a:hover {
+      background-color: white;
+      color: black;
+    }
 
-  /* Tiled background logo */
-  .bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://hyp3rbolistic.github.io/logobackground.jpg') repeat;
-    opacity: 0.5;
-    z-index: -1;
-  }
+    /* Tiling, semi-transparent, rotated background */
+    .bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;   /* larger to accommodate rotation */
+      height: 200%;
+      background: url('https://hyp3rbolistic.github.io/background.png') repeat;
+      background-size: 200px 200px;  /* adjust tile size */
+      opacity: 0.5;
+      transform: rotate(-5deg);
+      z-index: -1;
+    }
 
-  /* Centered text box */
-  .content-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0,0,0,0.7); /* semi-transparent box */
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    max-width: 90%;
-  }
-</style>
+    /* Centered text box */
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0,0,0,0.6);
+      padding: 40px;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 90%;
+    }
+
+    .content h1 {
+      margin: 0 0 20px;
+      font-size: clamp(1.5rem, 3vw, 3rem);
+    }
+
+    .content p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Header with buttons -->
+  <!-- Header with absolute links -->
   <div class="header">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
+    <a href="/">home</a>
+    <a href="/about">about</a>
+    <a href="/projects">projects</a>
+    <a href="/contact">contact</a>
   </div>
 
-  <!-- Tiled logo background -->
+  <!-- Tiling background -->
   <div class="bg"></div>
 
-  <!-- Centered content box -->
-  <div class="content-box">
-    <h1>About Me</h1>
-    <p>This is where you can write your introduction, portfolio description, or whatever content you want for this page.</p>
+  <!-- Centered content -->
+  <div class="content">
+    <h1>About Hyperbolistic</h1>
+    <p>This is where you can add your bio or info about the project.</p>
   </div>
-
 </body>
 </html>
