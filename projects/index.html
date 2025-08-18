@@ -76,13 +76,20 @@
       gap: 15px;
     }
 
-    .grid-item {
-      padding: 15px;
-      text-align: center;
-      background-color: rgba(255, 255, 255, 0.08);
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }
+.grid-item {
+  padding: 15px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+.grid-item:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* brighter */
+  box-shadow: 0 0 20px rgba(255,255,255,0.6); /* glow effect */
+  transform: scale(1.05); /* slight zoom */
+}
 
     .grid-item img {
       max-width: 120px;
