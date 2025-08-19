@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ABOUT</title>
   <style>
+    /* Base styles */
     body, html {
       margin: 0;
       padding: 0;
-      height: 100%;
       font-family: monospace;
       color: white;
       background-color: black;
-      overflow: hidden;
+      overflow-x: hidden; /* prevent horizontal scroll from rotated bg */
+      overflow-y: auto;   /* allow vertical scroll */
     }
 
     /* Header bar */
@@ -47,26 +48,28 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 200%;   /* larger to accommodate rotation */
-      height: 200%;
-      background: url('https://hyp3rbolistic.github.io/background.png') repeat;
-      background-size: 200px 200px;  /* adjust tile size */
-      opacity: 0.5;
-      transform: rotate(-5deg);
-      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://hyp3rbolistic.github.io/background.png');
+      background-repeat: repeat;
+      background-size: 300px 300px; /* spread out tiles */
+      background-position: center;
+      opacity: 0.125; /* more transparent */
+      transform: rotate(-5deg) scale(1.1);
+      transform-origin: center center;
+      z-index: -1; /* behind everything */
     }
 
     /* Centered text box */
     .content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      margin-top: 70px; /* below header */
+      padding: 40px 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
       background-color: rgba(0,0,0,0.6);
-      padding: 40px;
       border-radius: 8px;
       text-align: center;
-      max-width: 90%;
     }
 
     .content h1 {
@@ -80,7 +83,7 @@
   </style>
 </head>
 <body>
-  <!-- Header with absolute links -->
+  <!-- Header -->
   <div class="header">
     <a href="/">home</a>
     <a href="/about">about</a>
@@ -88,7 +91,7 @@
     <a href="/contact">contact</a>
   </div>
 
-  <!-- Tiling background -->
+  <!-- Background -->
   <div class="bg"></div>
 
   <!-- Centered content -->
