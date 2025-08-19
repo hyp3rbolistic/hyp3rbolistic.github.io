@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PROJECTS</title>
   <style>
+    /* Base styles */
     body, html {
       margin: 0;
       padding: 0;
-      height: 100%;
       font-family: monospace;
       color: white;
       background-color: black;
-      overflow: hidden;
+      overflow-x: hidden; /* prevent horizontal scroll from rotated bg */
+      overflow-y: auto;   /* allow vertical scroll */
     }
 
     /* Header bar */
@@ -42,7 +43,7 @@
       color: black;
     }
 
-    /* Tiling, semi-transparent, rotated background */
+    /* Background */
     .bg {
       position: fixed;
       top: 0;
@@ -58,15 +59,12 @@
 
     /* Centered content */
     .content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(0,0,0,0.6);
-      padding: 40px;
-      border-radius: 8px;
+      margin-top: 70px; /* push below header */
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
       text-align: center;
-      max-width: 90%;
     }
 
     /* Responsive grid */
@@ -89,13 +87,21 @@
     .grid-item:hover {
       background-color: rgba(255, 255, 255, 0.2);
       box-shadow: 0 0 20px rgba(255,255,255,0.6);
-      transform: scale(1.05);
+      transform: scale(1.08);
     }
 
     .grid-item img {
       max-width: 120px;
       border-radius: 6px;
       margin-bottom: 10px;
+      transition: transform 0.2s;
+    }
+
+    /* Make images scale slightly on hover for mobile */
+    @media (max-width: 600px) {
+      .grid-item:hover img {
+        transform: scale(1.05);
+      }
     }
 
     /* Responsive breakpoints */
@@ -111,7 +117,7 @@
       }
     }
 
-    /* Modal hidden by default */
+    /* Modal */
     .modal {
       display: none;
       position: fixed;
@@ -121,13 +127,15 @@
       width: 100%;
       height: 100%;
       background-color: rgba(0,0,0,0.8);
+      overflow-y: auto;
+      padding: 50px 20px;
+      box-sizing: border-box;
     }
 
-    /* Modal box */
     .modal-content {
       background-color: black;
       color: white;
-      margin: 10% auto;
+      margin: auto;
       padding: 20px;
       border: 1px solid white;
       width: 80%;
@@ -136,7 +144,6 @@
       text-align: center;
     }
 
-    /* Close button */
     .close {
       float: right;
       font-size: 24px;
@@ -147,7 +154,7 @@
     .responsive-iframe {
       position: relative;
       width: 100%;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      padding-bottom: 56.25%; /* 16:9 */
       height: 0;
     }
 
@@ -159,6 +166,7 @@
       height: 100%;
       border: 0;
     }
+
   </style>
 </head>
 <body>
@@ -231,7 +239,6 @@
       document.getElementById("modal-text").innerHTML = "";
     }
 
-    // Close modal if clicking outside
     window.onclick = function(event) {
       let modal = document.getElementById("modal");
       if (event.target == modal) {
