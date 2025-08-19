@@ -43,18 +43,21 @@
       color: black;
     }
 
-    /* Background */
+    /* Tiling, semi-transparent, rotated background */
     .bg {
       position: fixed;
       top: 0;
       left: 0;
-      width: 200%;
-      height: 200%;
-      background: url('https://hyp3rbolistic.github.io/background.png') repeat;
-      background-size: 200px 200px;
-      opacity: 0.5;
-      transform: rotate(-5deg);
-      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://hyp3rbolistic.github.io/background.png');
+      background-repeat: repeat;
+      background-size: 300px 300px; /* more spread out */
+      background-position: center;
+      opacity: 0.125; /* 25% of original opacity */
+      transform: rotate(-5deg) scale(1.1);
+      transform-origin: center center;
+      z-index: -1; /* behind everything */
     }
 
     /* Centered content */
@@ -97,7 +100,7 @@
       transition: transform 0.2s;
     }
 
-    /* Make images scale slightly on hover for mobile */
+    /* Hover scaling for mobile */
     @media (max-width: 600px) {
       .grid-item:hover img {
         transform: scale(1.05);
@@ -166,7 +169,6 @@
       height: 100%;
       border: 0;
     }
-
   </style>
 </head>
 <body>
