@@ -12,8 +12,8 @@
       font-family: monospace;
       color: white;
       background-color: black;
-      overflow-x: hidden; /* prevent horizontal scroll from rotated bg */
-      overflow-y: auto;   /* allow vertical scroll */
+      overflow-x: hidden;
+      overflow-y: auto;
     }
 
     /* Header bar */
@@ -52,17 +52,17 @@
       height: 100%;
       background-image: url('https://hyp3rbolistic.github.io/background.png');
       background-repeat: repeat;
-      background-size: 300px 300px; /* more spread out */
+      background-size: 300px 300px;
       background-position: center;
-      opacity: 0.125; /* 25% of original opacity */
+      opacity: 0.125;
       transform: rotate(-5deg) scale(1.1);
       transform-origin: center center;
-      z-index: -1; /* behind everything */
+      z-index: -1;
     }
 
     /* Centered content */
     .content {
-      margin-top: 70px; /* push below header */
+      margin-top: 70px;
       padding: 40px 20px;
       max-width: 1200px;
       margin-left: auto;
@@ -172,7 +172,6 @@
   </style>
 </head>
 <body>
-  <!-- Header -->
   <div class="header">
     <a href="/">home</a>
     <a href="/about">about</a>
@@ -180,10 +179,8 @@
     <a href="/contact">contact</a>
   </div>
 
-  <!-- Background -->
   <div class="bg"></div>
 
-  <!-- Centered content -->
   <div class="content">
     <div class="grid">
       <div class="grid-item" onclick="openModal('JvVT073F6xE')">
@@ -203,7 +200,7 @@
         Pasadena Town Hall
       </div>
       <div class="grid-item" onclick="openModal('PjBxAtI1-KU')">
-        <img src="images/atc.webp" alt="All things change in the blink of an eye"><br>
+        <img src="images/atc.png" alt="All things change in the blink of an eye"><br>
         All things change in the blink of an eye
       </div>
       <div class="grid-item" onclick="openModal('OOalAd96xYk')">
@@ -213,7 +210,6 @@
     </div>
   </div>
 
-  <!-- Modal -->
   <div id="modal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
@@ -242,8 +238,7 @@
     }
 
     window.onclick = function(event) {
-      let modal = document.getElementById("modal");
-      if (event.target == modal) {
+      if (event.target == document.getElementById("modal")) {
         closeModal();
       }
     }
