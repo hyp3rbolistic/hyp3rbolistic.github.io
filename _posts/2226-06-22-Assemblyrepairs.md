@@ -7,7 +7,9 @@ categories: [Assembly, AHP]
 tags: [jericho, repairs]     # TAG names should always be lowercase
 ---
 Two weeks ago, a reconstruction project on the Assembly's facade was announced by AHP leadership.
-> "You're going to end up with a beautiful, beautiful building, the way it's supposed to be. Much better than it ever was, actually." -AHP Leader Briun Walland
+> "You're going to end up with a beautiful, beautiful building, the way it's supposed to be. Much better than it ever was, actually."
+>
+> -AHP Leader Briun Walland
 
 A monolith erupting from the City's skyline, the Assembly building has been standing since the first settlers arrived here. Its sandstone appearance was a welcome change from the brutalist architecture that plagued many of the first megacities, and the rest of Aiatabi district was designed to match. However, 100 years into our great City's life, its age has started to show. 
 An initial round of repairs was approved by the VCO when they controlled the Assembly in 2213, and it held for a time. However, as wind speeds over the last 5 years have hit new highs, the damage has increased exponentially.
