@@ -24,4 +24,5 @@ Founding Day = the day the first settlers moved into Avalon
 <!-- 
 Jericho Systems (LTF:H944TH7) = Greenwater Services
 Briun Walland = Donald Trump
+Elmer Protani = Kier Starmer
 -->
