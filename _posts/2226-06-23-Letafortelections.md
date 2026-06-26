@@ -2,7 +2,7 @@
 title: Grassroots candidates win big in Letafort primaries
 description: Are these newcomers a threat to VCO and AHP?
 date: 2226-06-23 12:47:24 +/-0800
-author: <lily>    
+author: <jieun>    
 categories: [Elections, Assembly]
 tags: [representatives, letafort]     # TAG names should always be lowercase
 ---
